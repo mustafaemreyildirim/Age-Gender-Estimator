@@ -1,2 +1,1 @@
-# Astronomy-NN-Classification
-# emotion-detection
+Emotion-detection
