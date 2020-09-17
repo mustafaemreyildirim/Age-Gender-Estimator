@@ -15,10 +15,15 @@ class AgeGenderLoss(nn.Module):
         gender_output, age_output, = output[:, 0], output[:, 1]
         gender_target, age_target = targets
 
-        gender_loss = torch.mean(-1.0 * (
-            torch.log(gender_output) * gender_target +
-            torch.log(1.0 - gender_output) * (1.0 - gender_target)
-        ))
-        
-        age_loss = torch.mean((age_output-age_target)**2)
-        return self.age_weight * age_loss, self.gender_weight * gender_loss
+        gender_loss = self.gender_weight * F.binary_cross_entropy(
+            gender_output,
+            gender_target,
+            reduction='mean'
+        )
+
+        age_loss = self.age_weight * F.smooth_l1_loss(
+            age_output,
+            age_target,
+            reduction='mean'
+        )
+        return gender_loss, age_loss

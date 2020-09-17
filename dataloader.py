@@ -7,12 +7,13 @@ from PIL import Image
 
 class IMDBWIKI(torch.utils.data.Dataset):
 
-    def __init__(self, root, train=True, transform=None, seed=0):
+    def __init__(self, root, train=True, transform=None, dp=False, seed=0):
         random.seed(seed)
 
         self.root = root
         self.train = train
         self.transform = transform
+        self.dp = dp
 
         self.images = []
         for i, path in enumerate(glob.glob(os.path.abspath('{}/**/*.jpg'.format(self.root)))):
@@ -22,7 +23,9 @@ class IMDBWIKI(torch.utils.data.Dataset):
                 self.images.append(path)
 
         random.shuffle(self.images)
-        if train:
+        if dp:
+            self.images = self.images[-10:]
+        elif train:
             self.images = self.images[:-2000]
         else:
             self.images = self.images[-2000:]
@@ -39,5 +42,5 @@ class IMDBWIKI(torch.utils.data.Dataset):
         if self.transform:
             image = self.transform(image)
 
-        return image, (gender, age)
+        return image, (float(gender), float(age))
 
