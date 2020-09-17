@@ -20,8 +20,8 @@ On the other hand, we have another file for training that emerges Squezeenet imp
 
 For training :
 ```sh
-$ python3 train.py --data=<str> [options]
-$ python3 train.py --data=<str> --lr=<float> --wd=<float> --batch_size=<int> --checkpoint=<str> --resume=<str> --epoch=<int> --num_works=<int> --log=<str> --print_freq=<int>
+$ python3 train.py --data <str> [options]
+$ python3 train.py --data <str> --lr <float> --wd <float> --batch_size <int> --checkpoint <str> --resume <str> --epoch <int> --num_works <int> --log <str> --print_freq <int>
 ```
 For running the command, it is mandatory to specify the dataset path, other variables are predefined however if different approaches are intended to attempt on, they can be redefined by running second command.
 
@@ -34,7 +34,7 @@ After completing all epochs that is defined, a model is created. The created mod
 The alignment and detection parts are modified from a [repo](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch/tree/master/align) for specified requirements. 
 
 ```sh
-$ python3 videoprocess.py  --video_path=<str> 
+$ python3 videoprocess.py  --video_path <str> 
 ```
 For example:
 ![alt text](image.png)
