@@ -1,7 +1,7 @@
 # Age - Gender Estimator in Real Time / Video Applications
 
 Age-Gender Estimator is built by utilizing Pytorch frame. By utilizing SquezeeNet network, an estimator is created.   
-.
+
 ## Data Preparation 
 
 For training process, a data collection operation is done. Data has been retrieved from open-source datasets.These datasets contains images from IMDB and Wikipedia websites. The dataset has subfolders that contains images and with respect to alignment of images a Mat file holds labels for each images. 
