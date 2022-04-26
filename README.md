@@ -29,7 +29,7 @@ In both of the training scripts, Tensorboard visualisation tool is invoked and t
 
 ## Real Time Application
 
-After completing all epochs that is defined, a model is created. The created model can be implemented to a video or a live recording. For this purpose, the scripts under /detection_video_operation can be utilized. By having the contents in same directory, this command can be run. Video path can be defined for a specified video or a live session is requested video_path can be called as 0.
+After completing all epochs that are defined, a model is created. The created model can be implemented to a video or a live recording. For this purpose, the scripts under /detection_video_operation can be utilized. By having the contents in same directory, this command can be run. Video path can be defined for a specified video or a live session is requested video_path can be called as 0.
 
 The alignment and detection parts are modified from a [repo](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch/tree/master/align) for specified requirements. 
 
