@@ -4,7 +4,7 @@ Age-Gender Estimator is built by utilizing Pytorch frame. By utilizing SquezeeNe
 
 ## Data Preparation 
 
-For training process, a data collection operation is done. Data has been retrieved from open-source datasets.These datasets contains images from IMDB and Wikipedia websites. The dataset has subfolders that contains images and with respect to alignment of images a Mat file holds labels for each images. 
+For training process, a data collection operation is done. Data has been retrieved from open-source datasets.These datasets contain images from IMDB and Wikipedia websites. The dataset has subfolders that contains images and with respect to alignment of images a Mat file holds labels for each images. 
 
 Hence an extraction operation for labels was mandatory.
 #### DataSets
